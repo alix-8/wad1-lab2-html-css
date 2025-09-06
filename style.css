@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to right,  #ced0d6, #6897dd, #ced0d6);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+    color:#0b2e64;
+    margin-top: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    color: rgb(107, 112, 112);
+}
+
+.desc{
+    text-align: center;
+    margin-top: 0px;
+    color:#ecebeb;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* DESCENDANT SELECTOR */
+table caption{
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #22232b;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* border-radius: 4px; */
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+}
+
+th{
+    background: #25416b;
+    color: #fff;
+}
+
+tr:nth-child(even){
+    background: #ced0d6;
+}
+
+#registration-form{
+    background:#25416b;
+    padding: 24px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px  rgba(0, 0, 0, 0.1);
+    color: white;
+
+}
+
+#registration-form h2{
+    color:#e3e7ec;
+    margin-bottom: 14px;
+}
+
+#registration-form p{
+    color:#c6ccd4;
+    margin-top: 14px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+.form-group{
+    display: block;
+    margin-bottom: 14px;
+}
+
+.form-group label{
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+input, select, textarea{
+    padding:10px;
+    margin-top: 4px;
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+}
+
+input[type="radio"], input[type="checkbox"]{
+    width: auto;
+    margin-right: 5px;
+}
+
+input[required]{
+    border-left: 4px solid #2696ff;
+}
+
+/* PSEUDO-CLASS */
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border: 1px solid #646568;
+    box-shadow: 0 0 4px rgba(179, 196, 204, 0.5);
+
+} 
+
+button {
+    padding: 10px 14px;
+    margin-top: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #555555;
+}
+
+button[type="submit"] {
+    background: #486797;
+    color: #ced0d6;
+}
+
+button[type="submit"]:hover {
+    background: #273750;
+    color: #4a4b4e;
+}
+
+button[type="reset"]:hover {
+    background: #808080;
+    color: #333333;
+}
+
+@media (max-width: 900px) {
+    .container{
+        grid-template-columns: 3fr;
+    }
+}
